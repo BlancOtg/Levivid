@@ -1,0 +1,16 @@
+export const icons = {
+  avatar: require('../assets/icons/avatar.png'),
+  empty: require('../assets/icons/empty.png'),
+  notFound: require('../assets/icons/not-found.png'),
+  noteAction: require('../assets/icons/note-action.png'),
+  star: require('../assets/icons/star.png'),
+  watchlist: require('../assets/icons/watchlist.png'),
+  search: require('../assets/icons/search.png'),
+  search_2: require('../assets/icons/search_2.png'),
+  close: require('../assets/icons/close.png'),
+  calendar: require('../assets/icons/calendar.png'),
+  clock: require('../assets/icons/clock.png'),
+  ticket: require('../assets/icons/ticket.png'),
+  back: require('../assets/icons/back.png'),
+  delete: require('../assets/icons/delete.png'),
+};
