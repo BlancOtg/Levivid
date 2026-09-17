@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, ScrollView, Text, View, Pressable } from "react-native";
 import { trendingMovies } from "../../../data";
 import SearchInput from "../ui/search-input";
-import { TabButton } from "../ui/tab-button";
+import TabButton from "../ui/tab-button";
 import TrendingMovieCard from "../movie/trending-movie-card";
 
 
@@ -51,14 +51,14 @@ const Header = ({
         showsHorizontalScrollIndicator={false}
         contentContainerClassName="gap-2 mt-4"
       >
-        {/* {tabs.map((tab) => (
+        {tabs.map((tab) => (
           <TabButton
             key={tab.value}
             title={tab.title}
             activeTab={active}
             onPress={() => setActive(tab.value)}
           />
-        ))} */}
+        ))}
       </ScrollView>
     </View>
   );

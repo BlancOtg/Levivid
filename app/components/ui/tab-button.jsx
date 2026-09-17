@@ -1,6 +1,6 @@
 import { Pressable, Text, View } from "react-native";
 
-export  const  TabButton = ({
+  const  TabButton = ({
   title,
   value,
   activeTab,
@@ -21,3 +21,5 @@ export  const  TabButton = ({
     </Pressable>
   );
 };
+
+export default TabButton;
