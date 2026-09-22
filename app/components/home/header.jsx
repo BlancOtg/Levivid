@@ -4,16 +4,16 @@ import { trendingMovies } from "../../../data";
 import SearchInput from "../ui/search-input";
 import TabButton from "../ui/tab-button";
 import TrendingMovieCard from "../movie/trending-movie-card";
+import { useRouter } from "expo-router";
 
+const Header = ({ tabs, active, setActive, searchTerm, setSearchTerm }) => {
+  const router = useRouter();
 
-const Header = ({
-  tabs,
-  active,
-  setActive,
-  searchTerm,
-  setSearchTerm,
-  routeToSearch,
-}) => {
+  const handleSearchSubmit = () => {
+    router.push("/search?searchTerms=" + encodeURIComponent(searchTerm));
+    setSearchTerm("");
+  };
+
   return (
     <View className="mb-4">
       <Text className="text-xl font-bold text-neutral">
@@ -21,14 +21,15 @@ const Header = ({
       </Text>
 
       {/* Search Input Input */}
-      <Pressable onPress={routeToSearch} className="mt-4 relative">
+      <View className="mt-4 relative">
         <SearchInput
           initialValue={searchTerm}
           onSearch={setSearchTerm}
-          onSubmit={routeToSearch}
-          editable={false} // Add this prop
+          onSubmit={handleSearchSubmit}
+          onClear={() => setSearchTerm("")}
+          editable={true} // Add this prop
         />
-      </Pressable>
+      </View>
 
       {/* Horizontal Carousel Section 1 */}
       <View className="pt-2">
